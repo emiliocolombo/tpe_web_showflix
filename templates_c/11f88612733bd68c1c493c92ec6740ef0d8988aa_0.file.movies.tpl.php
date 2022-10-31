@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-16 21:00:50
+/* Smarty version 4.2.1, created on 2022-10-31 12:54:31
   from 'C:\xamp2\htdocs\web_2\TPE\templates\movies.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634c54e28d7708_51713369',
+  'unifunc' => 'content_635fb77739da58_07013857',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '11f88612733bd68c1c493c92ec6740ef0d8988aa' => 
     array (
       0 => 'C:\\xamp2\\htdocs\\web_2\\TPE\\templates\\movies.tpl',
-      1 => 1665946849,
+      1 => 1667217007,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634c54e28d7708_51713369 (Smarty_Internal_Template $_smarty_tpl) {
+function content_635fb77739da58_07013857 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <div class="row w-100 d-flex justify-content-center p-2">

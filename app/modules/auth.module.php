@@ -11,12 +11,6 @@
             return $db;
         }
 
-        function getUserByMail($email){
-            $query = $this->db->prepare("SELECT * FROM usuarios WHERE email = ?");
-            $query->execute([$email]);
-            $data = $query->fetch(PDO::FETCH_OBJ);
-            return $data;
-        }
 
         function getUserById($id){
             $query = $this->db->prepare("SELECT * FROM usuarios WHERE id_usuario = ?");
