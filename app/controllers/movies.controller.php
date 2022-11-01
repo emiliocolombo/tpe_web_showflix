@@ -18,18 +18,19 @@
 
         function showOneMovie($idMovie, $error = null){
             $movie = $this->module->getOnce($idMovie);
-            $stockModule = new StockModule ();
+            $stockModule = new StockModule();
             $stockData = $stockModule->getOnce($idMovie);
             $this->view->showMovie($movie, $stockData, $error);
         }
 
         function deleteMovie($id){
             $this->module->deleteMovie($id);
-            header("Location: " . BASE_URL . "movies");
+            //header("Location: " . BASE_URL . "movies");
         }
 
         function showEditForm($id){
-            $this->view->showEditForm($id);
+            $movie = $this->module->getOnce($id);
+            $this->view->showEditForm($movie);
         }
 
         function editMovie($id){

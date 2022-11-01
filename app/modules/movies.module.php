@@ -28,6 +28,7 @@
         function deleteMovie($id){
             $query = $this->db->prepare('DELETE FROM peliculas WHERE id = ?');
             $query->execute([$id]);
+            echo $id;
         }
 
         function editMovie($id, $nombre, $imagen, $duracion, $director, $genero, $descripcion){

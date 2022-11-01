@@ -8,7 +8,6 @@
         private $view;
         function __construct(){
             $this->module = new UserModule();
-            $this->helper = new AuthHelper();
             $this->view = new UserView();
         }
 

@@ -24,9 +24,9 @@
             $this->smarty->display('templates/movie.tpl');
         }
 
-        public function showEditForm($id){
+        public function showEditForm($movie){
             $this->smarty->assign('basehref', BASE_URL);
-            $this->smarty->assign('id', $id);
+            $this->smarty->assign('movie', $movie);
             $this->smarty->display('templates/edit_movie.tpl');
         }
     }
