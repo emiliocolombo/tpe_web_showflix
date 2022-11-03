@@ -77,7 +77,7 @@ include_once "app/helpers/auth.helper.php";
             $userController = new UserController();
             $userController->showRegister("el email ya esta registrado");
             break;
-        case "delete":
+        case "delete_movie":
             $authController->checkLoggedIn();
             $authController->checkAdmin();
             $moviesController = new MoviesController();

@@ -27,6 +27,10 @@
         function getOnce($id){
             return $this->module->getOnce($id);
         }
+
+        function delete($idMovie){
+            $this->module->delete($idMovie);
+        }
     }
 
 ?>

@@ -1,6 +1,6 @@
 <?php
     include_once 'app/modules/movies.module.php';
-    include_once 'app/modules/stock.module.php';
+    include_once 'app/controllers/stock.controller.php';
     include_once 'app/views/movies.view.php';
     class MoviesController{
         private $module;
@@ -18,14 +18,16 @@
 
         function showOneMovie($idMovie, $error = null){
             $movie = $this->module->getOnce($idMovie);
-            $stockModule = new StockModule();
-            $stockData = $stockModule->getOnce($idMovie);
+            $stockController = new StockController();
+            $stockData = $stockController->getOnce($idMovie);
             $this->view->showMovie($movie, $stockData, $error);
         }
 
         function deleteMovie($id){
+            $stockController = new StockController();
+            $stockController->delete($id);
             $this->module->deleteMovie($id);
-            //header("Location: " . BASE_URL . "movies");
+            header("Location: " . BASE_URL . "movies");
         }
 
         function showEditForm($id){
@@ -52,7 +54,7 @@
             $genero = $_POST['genero'];
             $descripcion = $_POST['descripcion'];
             $this->module->addMovie($nombre, $imagen, $duracion, $director, $genero, $descripcion);
-            header("Location: " . BASE_URL . "movies");
+            //header("Location: " . BASE_URL . "movies");
         }
     }
 ?>

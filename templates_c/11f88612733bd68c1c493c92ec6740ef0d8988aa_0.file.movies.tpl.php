@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-02 16:05:11
+/* Smarty version 4.2.1, created on 2022-11-04 00:41:22
   from 'C:\xamp2\htdocs\web_2\TPE\templates\movies.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_636287270339a8_79895601',
+  'unifunc' => 'content_636451a20494b5_99801219',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '11f88612733bd68c1c493c92ec6740ef0d8988aa' => 
     array (
       0 => 'C:\\xamp2\\htdocs\\web_2\\TPE\\templates\\movies.tpl',
-      1 => 1667401507,
+      1 => 1667518837,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_636287270339a8_79895601 (Smarty_Internal_Template $_smarty_tpl) {
+function content_636451a20494b5_99801219 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <div class="row w-100 d-flex justify-content-center p-2">
@@ -48,7 +48,7 @@ $_smarty_tpl->tpl_vars['pelicula']->do_else = false;
               <a class="justify-content-center align-items-center d-flex btn" href="movie/<?php echo $_smarty_tpl->tpl_vars['pelicula']->value->id;?>
 ">mas info</a>
               <?php if ((isset($_SESSION['IS_LOGGED'])) && $_SESSION['IS_ADMIN']) {?>
-                <a class="btn" href="delete/<?php echo $_smarty_tpl->tpl_vars['pelicula']->value->id;?>
+                <a class="btn" href="delete_movie/<?php echo $_smarty_tpl->tpl_vars['pelicula']->value->id;?>
 ">eliminar</a> 
                 <a class="btn" href="formeditmovie/<?php echo $_smarty_tpl->tpl_vars['pelicula']->value->id;?>
 ">editar</a> 

@@ -12,7 +12,7 @@
               <p class="card-text justify-content-center d-flex">{$pelicula->genero}</p>
               <a class="justify-content-center align-items-center d-flex btn" href="movie/{$pelicula->id}">mas info</a>
               {if isset($smarty.session.IS_LOGGED) && $smarty.session.IS_ADMIN}
-                <a class="btn" href="delete/{$pelicula->id}">eliminar</a> 
+                <a class="btn" href="delete_movie/{$pelicula->id}">eliminar</a> 
                 <a class="btn" href="formeditmovie/{$pelicula->id}">editar</a> 
               {/if}
               </div>

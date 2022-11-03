@@ -30,5 +30,11 @@
             $query = $this->db->prepare("UPDATE stock SET cant_copias = ? WHERE id_pelicula = ?");
             $query->execute([$cantPeliculasMenosUno, $idMovie]);
         }
+    
+        function delete($idMovie){
+            echo $idMovie;
+            $query = $this->db->prepare('DELETE FROM stock WHERE id_pelicula = ?');
+            $query->execute([$idMovie]);
+        }
     }
 ?>
