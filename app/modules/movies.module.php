@@ -28,7 +28,6 @@
         function deleteMovie($id){
             $query = $this->db->prepare('DELETE FROM peliculas WHERE id = ?');
             $query->execute([$id]);
-            echo $id;
         }
 
         function editMovie($id, $nombre, $imagen, $duracion, $director, $genero, $descripcion){
@@ -36,7 +35,7 @@
             $query->execute([$nombre, $imagen, $duracion, $director, $genero, $descripcion, $id]);
         }
 
-        function getAllGenre($genre){
+        function getByGenre($genre){
             $query = $this->db->prepare("SELECT * FROM peliculas WHERE genero = ?");
             $query->execute([$genre]);
             $data = $query->fetchAll(PDO::FETCH_OBJ);

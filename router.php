@@ -83,17 +83,47 @@ include_once "app/helpers/auth.helper.php";
             $moviesController = new MoviesController();
             $moviesController->deleteMovie($params[1]);
             break;
-        case "formedit":
+        case "delete_genre":
+            $authController->checkLoggedIn();
+            $authController->checkAdmin();
+            $genresController = new GenresController();
+            $genresController->deleteGenre($params[1]);
+            break;
+        case "formeditmovie":
             $authController->checkLoggedIn();
             $authController->checkAdmin();
             $moviesController = new MoviesController();
             $moviesController->showEditForm($params[1]);
             break;
-        case "edit":
+        case "formeditgenre":
+            $authController->checkLoggedIn();
+            $authController->checkAdmin();
+            $genresController = new GenresController();
+            $genresController->showEditForm($params[1]);
+            break;
+        case "warning_edit_genre":
+            $authController->checkLoggedIn();
+            $authController->checkAdmin();
+            $genresController = new GenresController();
+            $genresController->showWarning("esta seguro que desea editar este genero? se editara en todas las peliculas del mismo.", "edit_genre/$params[1]/". $_POST['genre'] . "/" . $_POST['isatp'], "genre/$params[1]");
+            break;
+        case "warning_delete_genre":
+            $authController->checkLoggedIn();
+            $authController->checkAdmin();
+            $genresController = new GenresController();
+            $genresController->showWarning("esta seguro que desea borrar este genero? se borraran todas las peliculas del mismo.", "delete_genre/$params[1]", "genre/$params[1]");
+            break;
+        case "edit_movie":
             $authController->checkLoggedIn();
             $authController->checkAdmin();
             $moviesController = new MoviesController();
             $moviesController->editMovie($params[1]);
+            break;
+        case "edit_genre":
+            $authController->checkLoggedIn();
+            $authController->checkAdmin();
+            $genresController = new GenresController();
+            $genresController->editGenre($params[1], $params[2], $params[3]);
             break;
         case "buy":
             $authController->checkLoggedIn();
@@ -113,6 +143,12 @@ include_once "app/helpers/auth.helper.php";
             $authController->checkAdmin();
             $moviesController = new MoviesController();
             $moviesController->addMovie();
+            break;
+        case 'add_genre':
+            $authController->checkLoggedIn();
+            $authController->checkAdmin();
+            $genresController = new GenresController();
+            $genresController->addGenre();
             break;
         default:
             echo "error 404";

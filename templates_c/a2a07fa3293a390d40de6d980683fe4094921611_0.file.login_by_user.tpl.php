@@ -1,29 +1,30 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-17 05:10:45
+/* Smarty version 4.2.1, created on 2022-11-02 16:02:00
   from 'C:\xamp2\htdocs\web_2\TPE\templates\login_by_user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634cc7b5e36783_29658213',
+  'unifunc' => 'content_63628668c3b547_58038729',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a2a07fa3293a390d40de6d980683fe4094921611' => 
     array (
       0 => 'C:\\xamp2\\htdocs\\web_2\\TPE\\templates\\login_by_user.tpl',
-      1 => 1665976244,
+      1 => 1667401311,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:header.tpl' => 1,
-    'file:admin_form.tpl' => 1,
+    'file:admin_movies_form.tpl' => 1,
+    'file:admin_genres_form.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634cc7b5e36783_29658213 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63628668c3b547_58038729 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <h2 class="text-center card bg-warning my-2 py-5">
@@ -32,7 +33,9 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 </h2>
 
 <?php if ($_SESSION['IS_ADMIN']) {?>
-    <?php $_smarty_tpl->_subTemplateRender("file:admin_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+    <?php $_smarty_tpl->_subTemplateRender("file:admin_movies_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+    <?php $_smarty_tpl->_subTemplateRender("file:admin_genres_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <?php } else { ?>
         <?php if (!empty($_smarty_tpl->tpl_vars['sellData']->value)) {?>

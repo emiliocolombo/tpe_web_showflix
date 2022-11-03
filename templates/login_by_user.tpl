@@ -4,7 +4,8 @@
 </h2>
 
 {if $smarty.session.IS_ADMIN}
-    {include file="admin_form.tpl"}
+    {include file="admin_movies_form.tpl"}
+    {include file="admin_genres_form.tpl"}
     {else}
         {if !empty($sellData)}
             <h3 class="card bg-dark text-warning py-5">

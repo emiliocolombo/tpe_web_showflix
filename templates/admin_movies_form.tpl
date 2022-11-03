@@ -4,7 +4,7 @@
     <h2 class="text-center">
         editar pelicula
     </h2>
-    <form class="text-center" method="POST" action="edit/{$movie->id}">
+    <form class="text-center" method="POST" action="edit_movie/{$movie->id}">
     {else}
         <h2 class="text-center">
             agregar pelicula

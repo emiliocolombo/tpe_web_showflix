@@ -52,8 +52,7 @@
             $genero = $_POST['genero'];
             $descripcion = $_POST['descripcion'];
             $this->module->addMovie($nombre, $imagen, $duracion, $director, $genero, $descripcion);
-            $this->showMovies();
+            header("Location: " . BASE_URL . "movies");
         }
-
     }
 ?>
