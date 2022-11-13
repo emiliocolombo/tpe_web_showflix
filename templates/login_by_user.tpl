@@ -15,7 +15,7 @@
                 <ul>
                     <li>id transaccion: {$data->id_transaccion}</li>
                     <li>precio: {$data->precio_vendido}</li>
-                    <li>id pelicula: {$data->id_pelicula}</li>
+                    <li>nombre pelicula: {$data->pelicula}</li>
                 </ul>
             {/foreach}
             {else}

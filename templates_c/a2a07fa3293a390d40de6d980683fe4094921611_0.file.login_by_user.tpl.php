@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-02 16:02:00
+/* Smarty version 4.2.1, created on 2022-11-07 15:36:24
   from 'C:\xamp2\htdocs\web_2\TPE\templates\login_by_user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63628668c3b547_58038729',
+  'unifunc' => 'content_636917e8a66123_48914262',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a2a07fa3293a390d40de6d980683fe4094921611' => 
     array (
       0 => 'C:\\xamp2\\htdocs\\web_2\\TPE\\templates\\login_by_user.tpl',
-      1 => 1667401311,
+      1 => 1667831778,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_63628668c3b547_58038729 (Smarty_Internal_Template $_smarty_tpl) {
+function content_636917e8a66123_48914262 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <h2 class="text-center card bg-warning my-2 py-5">
@@ -53,7 +53,7 @@ $_smarty_tpl->tpl_vars['data']->do_else = false;
 </li>
                     <li>precio: <?php echo $_smarty_tpl->tpl_vars['data']->value->precio_vendido;?>
 </li>
-                    <li>id pelicula: <?php echo $_smarty_tpl->tpl_vars['data']->value->id_pelicula;?>
+                    <li>nombre pelicula: <?php echo $_smarty_tpl->tpl_vars['data']->value->pelicula;?>
 </li>
                 </ul>
             <?php

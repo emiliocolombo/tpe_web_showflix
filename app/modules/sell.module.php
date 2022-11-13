@@ -11,9 +11,9 @@
            return $db;
         }
 
-        function addSell($idMovie, $idUser, $precio){
-            $query = $this->db->prepare("INSERT INTO ventas (id_pelicula, precio_vendido, id_usuario) VALUES( ?, ?, ?)");
-            $query->execute([$idMovie, $precio, $idUser]);
+        function addSell($idUser, $precio, $nombrePelicula){
+            $query = $this->db->prepare("INSERT INTO ventas (precio_vendido, id_usuario, pelicula) VALUES( ?, ?, ?)");
+            $query->execute([$precio, $idUser, $nombrePelicula]);
         }
 
         function getSellsByUserId($id){

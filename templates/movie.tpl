@@ -10,8 +10,20 @@
               <p class="card-text justify-content-center d-flex">genero {$pelicula->genero}</p>
               <p class="card-text justify-content-center d-flex">duracion: {$pelicula->duracion}</p>
               <p class="card-text justify-content-center d-flex">director: {$pelicula->director}</p>
-              <p class="card-text justify-content-center d-flex">stock: {$stockData->cant_copias}</p>
-              <p class="card-text justify-content-center d-flex">precio (usd): {$stockData->precio_usd}</p>
+              <p class="card-text justify-content-center d-flex">stock: 
+              {if isset($stockData->cant_copias)}
+                  {$stockData->cant_copias}
+                {else}
+                  no esta disponible
+              {/if}
+                </p>
+              <p class="card-text justify-content-center d-flex">precio (usd):
+                {if isset($stockData->precio_usd)}
+                  {$stockData->precio_usd}
+                {else}
+                  no esta disponible
+                {/if}
+              </p>
               {if isset($smarty.session.IS_LOGGED) && !$smarty.session.IS_ADMIN}
                 {if $error} 
                     <div class="alert alert-danger mt-3 d-flex justify-content-center align-items-center">

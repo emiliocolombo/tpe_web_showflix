@@ -22,7 +22,7 @@
            $query = $this->db->prepare("SELECT * FROM stock WHERE id_pelicula = $id");
            $query->execute();
            $data = $query->fetch(PDO::FETCH_OBJ);
-           return $data;
+            return $data;
         }
 
         function decrementStock($idMovie, $stockData){

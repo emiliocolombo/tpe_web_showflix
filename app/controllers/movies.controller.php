@@ -11,6 +11,10 @@
             $this->view = new MoviesView();
         }
 
+        function getOnce($id){
+            return $this->module->getOnce($id);
+        }
+
         function showMovies(){
             $movies = $this->module->getAll();
             $this->view->showMovies($movies);
